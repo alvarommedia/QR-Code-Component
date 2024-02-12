@@ -1,46 +1,59 @@
 *{
+/*Box model stuff*/
   margin: 0px;
   padding: 0px;
 }
 body{
-  font-family: 'Outfit', sans-serif;
-  background-color: hsl(212, 45%, 89%);
-  height: 100vh;
+/*Display stuff*/
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+/*Box model stuff*/
+  height: 100vh;
+  background-color: hsl(212, 45%, 89%);
+/*Typography stuff*/
+  font-family: 'Outfit', sans-serif;
 }
 .card{
-  background-color: white;
-  width: 20rem;
-  height: 31.0625rem;
+/*Display stuff*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
+/*Box model stuff*/
+  width: 20rem;
+  height: 31.0625rem;
   border-radius: 10px;
+  background-color: white;
 }
 .card__code{
+/*Box model stuff*/
   width: 18rem;
   height: 18rem;
   margin-top: 1rem;
   border-radius: 10px;
 }
 .card__title{
-  font-weight: 700;
-  font-size: 1.375rem;
-  text-align: center;
-  line-height: 28px;
-  color: hsl(218, 44%, 22%);
+/*Box model stuff*/
   width: 18rem;
   margin-top: 1.875rem;
+/*Typography stuff*/
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-align: center;
+  color: hsl(218, 44%, 22%);
+/*Miscellaneous*/
+  line-height: 28px;
 }
 .card__text{
-  color: hsl(220, 15%, 55%);
-  text-align: center;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  line-height: 19px;
+/*Box model stuff*/
   width: 16rem;
   margin-top: 6px;
+/*Typography stuff*/
+  font-size: 0.9375rem;
+  font-weight: 400;
+  text-align: center;
+  color: hsl(220, 15%, 55%);
+/*Miscellaneous*/
+  line-height: 19px;
 }
