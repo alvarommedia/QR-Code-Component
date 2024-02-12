@@ -18,4 +18,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /var/www/alvarommedia/html/qr-code-component/ # Ajusta esto a la ruta en tu servidor donde quieras desplegar
+          server-dir: /qr-code-component/
