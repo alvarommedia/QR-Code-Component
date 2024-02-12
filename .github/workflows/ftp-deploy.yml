@@ -21,4 +21,4 @@ jobs:
           server-dir: /qr-code-component/
 
       - name: Change Permissions
-        run: chmod 755 /var/www/alvarommedia/html/qr-code-component/*
+        run: sudo chmod 755 /var/www/alvarommedia/html/qr-code-component/*
