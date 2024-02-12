@@ -1,19 +1,21 @@
-name: FTP Deploy
-on: [push]
+name: Deploy via FTP
+
+on:
+  push:
+    branches:
+      - main # Asegúrate de cambiar esto si deseas desplegar desde otra rama
+
 jobs:
   ftp-deploy:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
 
-      - name: List files in the repo
-        run: ls
-
-      - name: FTP Deploy Action
+      - name: Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           ftp-server: ftp://${{ secrets.FTP_SERVER }}
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./qr-code-component/
-          git-ftp-args: --insecure
+          local-dir: ./
+          server-dir: /var/www/alvarommedia/html/qr-code-component/ # Ajusta esto a la ruta en tu servidor donde quieras desplegar
