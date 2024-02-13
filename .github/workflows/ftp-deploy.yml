@@ -22,3 +22,6 @@ jobs:
 
       - name: Change Permissions
         run: sudo chmod 755 /var/www/alvarommedia/html/qr-code-component/*
+
+      - name: Check current user
+        run: whoami
