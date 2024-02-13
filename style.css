@@ -9,7 +9,7 @@ body{
   align-items: center;
   justify-content: center;
 /*Box model stuff*/
-  height: 100vh;
+  height: 100dvh;
   background-color: hsl(212, 45%, 89%);
 /*Typography stuff*/
   font-family: 'Outfit', sans-serif;
