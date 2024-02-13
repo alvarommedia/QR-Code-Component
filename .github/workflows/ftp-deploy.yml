@@ -11,17 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Deploy to FTP server
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      - name: git-ftp push
+        uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          url: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /qr-code-component/
-
-      - name: Change Permissions
-        run: sudo chmod 755 /var/www/alvarommedia/html/qr-code-component/*
-
-      - name: Check current user
-        run: whoami
